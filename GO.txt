@@ -1,0 +1,23 @@
+ZuckBook - READY TO RUN
+======================
+
+DOCKER:
+  Windows: START.bat
+  Linux/Mac: bash START.sh
+
+XAMPP:
+  Windows: RUN_XAMPP.bat
+
+Manual:كمل 
+  docker-compose up -d
+
+Then open: http://localhost
+
+Database:
+  User: root
+  Pass: 197520error
+  DB: zuckbook
+
+All paths fixed!
+All errors fixed!
+Ready to use!

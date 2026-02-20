@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: zuckbook_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 197520error
+      MYSQL_DATABASE: zuckbook
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./ZuckBook/database/zuckbook_database.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - zuckbook_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  apache:
+    image: php:8.2-apache
+    container_name: zuckbook_apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./apache-config.conf:/etc/apache2/sites-available/000-default.conf
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/frontend
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - zuckbook_network
+    command: >
+      bash -c "
+      apt-get update &&
+      apt-get install -y default-mysql-client &&
+      docker-php-ext-install mysqli &&
+      a2enmod rewrite &&
+      apache2-foreground
+      "
+
+  node:
+    image: node:18-alpine
+    container_name: zuckbook_socket
+    working_dir: /app
+    volumes:
+      - ./socket-server:/app
+    ports:
+      - "3000:3000"
+    networks:
+      - zuckbook_network
+    command: >
+      sh -c "
+      npm install socket.io &&
+      node server.js
+      "
+
+volumes:
+  mysql_data:
+
+networks:
+  zuckbook_network:
+    driver: bridge

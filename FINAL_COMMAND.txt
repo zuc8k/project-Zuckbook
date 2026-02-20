@@ -1,0 +1,127 @@
+ZuckBook - FINAL STARTUP COMMAND
+=================================
+
+Choose ONE option below:
+
+OPTION 1: DOCKER (Recommended - All-in-One)
+============================================
+
+Windows:
+  START.bat
+
+Linux/Mac:
+  bash START.sh
+
+This will:
+  ✓ Start MySQL on port 3307
+  ✓ Start Apache on port 8080
+  ✓ Start Socket.IO on port 3000
+  ✓ Import database automatically
+  ✓ Install all dependencies
+
+Access: http://localhost:8080
+
+
+OPTION 2: XAMPP (Local Setup)
+=============================
+
+Windows:
+  RUN_XAMPP.bat
+
+Manual:
+  1. Start XAMPP Control Panel
+  2. Click "Start" for MySQL
+  3. Click "Start" for Apache
+  4. Open terminal in socket-server folder
+  5. Run: npm install && npm start
+  6. Open: http://localhost:8080
+
+
+OPTION 3: Manual Docker
+=======================
+
+docker-compose up -d
+
+Then access: http://localhost:8080
+
+
+OPTION 4: Manual XAMPP
+======================
+
+1. Start MySQL in XAMPP
+2. Start Apache in XAMPP
+3. Import database:
+   - Open: http://localhost/phpmyadmin
+   - Import: ZuckBook/database/zuckbook_database.sql
+4. Start Socket Server:
+   cd socket-server
+   npm install
+   npm start
+5. Open: http://localhost:8080
+
+
+DATABASE CREDENTIALS
+====================
+
+Host: localhost
+User: root
+Password: 197520error
+Database: zuckbook
+Port: 3306 (XAMPP) or 3307 (Docker)
+
+
+SERVICES
+========
+
+Apache: http://localhost:8080
+MySQL: localhost:3306 or 3307
+Socket.IO: http://localhost:3000
+phpMyAdmin: http://localhost/phpmyadmin
+
+
+STOP SERVICES
+=============
+
+Docker:
+  docker-compose down
+
+XAMPP:
+  Stop from Control Panel
+
+Node:
+  Ctrl+C in terminal
+
+
+TROUBLESHOOTING
+===============
+
+Port in use:
+  - Docker: docker-compose down
+  - XAMPP: Check Services
+
+MySQL won't start:
+  - Check port 3306 is free
+  - Restart XAMPP
+
+Apache won't start:
+  - Check port 80/8080 is free
+  - Check httpd.conf
+
+Socket.IO won't connect:
+  - Check Node.js installed
+  - Check port 3000 is free
+  - Check browser console
+
+
+FEATURES READY
+==============
+
+✓ User Registration & Login
+✓ Posts & Comments
+✓ Real-time Reactions
+✓ Messaging System
+✓ Socket.IO Real-time
+✓ User Profiles
+✓ Database Schema Complete
+✓ Admin Panel Ready
+✓ Support System Ready
