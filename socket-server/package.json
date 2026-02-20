@@ -1,0 +1,17 @@
+{
+  "name": "zuckbook-socket-server",
+  "version": "1.0.0",
+  "description": "ZuckBook Real-time Socket Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.5.4",
+    "http": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

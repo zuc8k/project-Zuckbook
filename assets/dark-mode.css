@@ -1,0 +1,1825 @@
+/**
+ * Dark Mode Styles
+ * Global dark mode CSS for all pages
+ */
+
+/* Dark Mode Variables */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f2f5;
+    --bg-tertiary: #e4e6eb;
+    --text-primary: #050505;
+    --text-secondary: #65676b;
+    --border-color: #e5e7eb;
+    --card-bg: #ffffff;
+    --input-bg: #f0f2f5;
+    --hover-bg: #f2f2f2;
+}
+
+.dark-mode {
+    --bg-primary: #1c1e21;
+    --bg-secondary: #18191a;
+    --bg-tertiary: #242526;
+    --text-primary: #e4e6eb;
+    --text-secondary: #b0b3b8;
+    --border-color: #2f3031;
+    --card-bg: #242526;
+    --input-bg: #3a3b3c;
+    --hover-bg: #3a3b3c;
+}
+
+/* Apply dark mode colors */
+.dark-mode body {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .header {
+    background: var(--bg-primary) !important;
+    border-bottom-color: var(--border-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+.dark-mode .card,
+.dark-mode .post,
+.dark-mode .create-post,
+.dark-mode .sidebar,
+.dark-mode .right-sidebar,
+.dark-mode .content,
+.dark-mode .profile-card,
+.dark-mode .friends-table,
+.dark-mode .coins-table,
+.dark-mode .users-coins-table,
+.dark-mode .post-card,
+.dark-mode .video-card,
+.dark-mode .group-card {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.dark-mode .search-box input,
+.dark-mode .form-input,
+.dark-mode .create-post-input,
+.dark-mode input[type="text"],
+.dark-mode input[type="email"],
+.dark-mode input[type="password"],
+.dark-mode input[type="number"],
+.dark-mode textarea,
+.dark-mode select {
+    background: var(--input-bg) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .search-box input::placeholder,
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .header-icon,
+.dark-mode .topbar-btn,
+.dark-mode .nav-item,
+.dark-mode .sidebar-item,
+.dark-mode .btn-secondary {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .header-icon:hover,
+.dark-mode .topbar-btn:hover,
+.dark-mode .nav-item:hover,
+.dark-mode .sidebar-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .nav-item.active {
+    color: #1877f2 !important;
+    border-bottom-color: #1877f2 !important;
+}
+
+.dark-mode .post-header,
+.dark-mode .comment-content,
+.dark-mode .setting-item {
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .post-stats,
+.dark-mode .post-actions {
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .action-btn {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .action-btn:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .modal-content,
+.dark-mode .confirm-modal-content,
+.dark-mode .success-modal-content,
+.dark-mode .edit-modal-content,
+.dark-mode .top-modal {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5) !important;
+}
+
+.dark-mode .modal-header-bar,
+.dark-mode .edit-modal-header,
+.dark-mode .edit-section {
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .modal-item {
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .modal-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .text-secondary,
+.dark-mode .post-time,
+.dark-mode .comment-time,
+.dark-mode .setting-desc,
+.dark-mode .post-meta,
+.dark-mode .video-meta,
+.dark-mode .profile-stats {
+    color: var(--text-secondary) !important;
+}
+
+/* Tables */
+.dark-mode table,
+.dark-mode .table {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode table thead,
+.dark-mode .table thead {
+    background: var(--bg-tertiary) !important;
+}
+
+.dark-mode table tbody tr:hover,
+.dark-mode .table tbody tr:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode table td,
+.dark-mode table th,
+.dark-mode .table td,
+.dark-mode .table th {
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Dropdowns and Menus */
+.dark-mode .dropdown-menu,
+.dark-mode .user-menu {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4) !important;
+}
+
+.dark-mode .user-menu-header {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%) !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+.dark-mode .user-menu-header img {
+    border-color: var(--card-bg) !important;
+}
+
+.dark-mode .user-menu-header-info h3 {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .user-menu-header-info p {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .dropdown-item,
+.dark-mode .menu-item,
+.dark-mode .user-menu-item {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .user-menu-item span {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .dropdown-item:hover,
+.dark-mode .menu-item:hover,
+.dark-mode .user-menu-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .user-menu-item:active {
+    background: #4a4b4c !important;
+}
+
+.dark-mode .user-menu-item i {
+    background: var(--bg-tertiary) !important;
+    color: #1877f2 !important;
+}
+
+.dark-mode .user-menu-item:hover i {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .user-menu-item.logout {
+    color: #ff6b6b !important;
+}
+
+.dark-mode .user-menu-item.logout i {
+    background: rgba(255, 107, 107, 0.15) !important;
+    color: #ff6b6b !important;
+}
+
+.dark-mode .user-menu-item.logout:hover i {
+    background: rgba(255, 107, 107, 0.25) !important;
+}
+
+.dark-mode .user-menu-divider {
+    background: var(--border-color) !important;
+}
+
+.dark-mode .modal-header-bar {
+    color: var(--text-primary) !important;
+    border-bottom-color: var(--border-color) !important;
+}
+
+.dark-mode .modal-close-btn {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .modal-close-btn:hover {
+    background: var(--hover-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .modal-item-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .modal-item-desc {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .modal-empty {
+    color: var(--text-secondary) !important;
+}
+
+/* Video page specific */
+.dark-mode .video-card {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .video-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .video-meta {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .video-thumbnail {
+    border-radius: 12px;
+}
+
+/* Video page improvements */
+.dark-mode .video-container {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .video-info {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .video-author {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .video-description {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .video-stats {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .video-duration {
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+}
+
+.dark-mode .video-grid {
+    background: transparent !important;
+}
+
+.dark-mode .video-sidebar {
+    background: transparent !important;
+}
+
+.dark-mode .video-sidebar-item {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .video-sidebar-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .video-sidebar-item.active {
+    background: rgba(24, 119, 242, 0.1) !important;
+    color: #1877f2 !important;
+}
+
+/* Groups page specific */
+.dark-mode .group-card {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .group-name {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .group-info {
+    color: var(--text-secondary) !important;
+}
+
+/* Groups page improvements */
+.dark-mode .sidebar-left,
+.dark-mode .sidebar-right {
+    background: transparent !important;
+}
+
+.dark-mode .sidebar-card {
+    background: var(--card-bg) !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.dark-mode .sidebar-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .sidebar-item {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .sidebar-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .sidebar-item.active {
+    background: rgba(24, 119, 242, 0.1) !important;
+    color: #1877f2 !important;
+}
+
+/* Groups main content */
+.dark-mode .main-content {
+    background: transparent !important;
+}
+
+.dark-mode .content-header {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .content-title {
+    color: var(--text-primary) !important;
+}
+
+/* Category badges */
+.dark-mode .category-badge {
+    background: var(--bg-tertiary) !important;
+    color: #1877f2 !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.dark-mode .category-badge:hover {
+    background: rgba(24, 119, 242, 0.1) !important;
+}
+
+/* Group items */
+.dark-mode .group-item {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .group-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+}
+
+.dark-mode .group-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .group-description {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .group-meta {
+    color: var(--text-secondary) !important;
+}
+
+/* Shortcuts section */
+.dark-mode .shortcuts-section {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .shortcut-item {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .shortcut-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+/* Group cover and avatar */
+.dark-mode .group-cover {
+    opacity: 0.9;
+}
+
+.dark-mode .group-avatar {
+    border-color: var(--card-bg) !important;
+    background: var(--card-bg) !important;
+}
+
+/* Join button states */
+.dark-mode .join-btn {
+    background: #1877f2 !important;
+    color: white !important;
+}
+
+.dark-mode .join-btn:hover {
+    background: #166fe5 !important;
+}
+
+.dark-mode .join-btn.joined {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .join-btn.pending {
+    background: rgba(255, 193, 7, 0.2) !important;
+    color: #ffc107 !important;
+}
+
+/* View button */
+.dark-mode .view-btn {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .view-btn:hover {
+    background: var(--hover-bg) !important;
+}
+
+/* Create group button */
+.dark-mode .create-group-btn {
+    background: #1877f2 !important;
+    color: white !important;
+}
+
+.dark-mode .create-group-btn:hover {
+    background: #166fe5 !important;
+}
+
+/* Groups grid */
+.dark-mode .groups-grid {
+    background: transparent !important;
+}
+
+/* Empty state */
+.dark-mode .empty-state {
+    background: var(--card-bg) !important;
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .empty-state h3 {
+    color: var(--text-primary) !important;
+}
+
+/* Suggested groups section */
+.dark-mode .suggested-groups {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .suggested-title {
+    color: var(--text-primary) !important;
+}
+
+/* Popular categories */
+.dark-mode .popular-categories {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .categories-title {
+    color: var(--text-primary) !important;
+}
+
+/* Right sidebar */
+.dark-mode .sidebar-right {
+    background: transparent !important;
+}
+
+/* Create Group page */
+.dark-mode .create-form {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .create-card {
+    background: var(--card-bg) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+}
+
+.dark-mode .create-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .form-section {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .form-section-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .form-label {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .form-input {
+    background: var(--input-bg) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .form-input:focus {
+    border-color: #1877f2 !important;
+    box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.15) !important;
+    background: var(--bg-tertiary) !important;
+}
+
+.dark-mode .form-input::placeholder {
+    color: var(--text-secondary) !important;
+    opacity: 0.7;
+}
+
+.dark-mode .form-hint,
+.dark-mode .form-description {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .upload-area {
+    background: var(--bg-tertiary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .upload-area:hover {
+    border-color: #1877f2 !important;
+    background: rgba(24, 119, 242, 0.1) !important;
+}
+
+.dark-mode .upload-text {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .upload-subtext {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .upload-icon {
+    color: #1877f2 !important;
+}
+
+.dark-mode .visibility-option {
+    background: var(--bg-tertiary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .visibility-option:hover {
+    background: rgba(24, 119, 242, 0.1) !important;
+    border-color: #1877f2 !important;
+}
+
+.dark-mode .visibility-option.selected {
+    background: rgba(24, 119, 242, 0.15) !important;
+    border-color: #1877f2 !important;
+    box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.1) !important;
+}
+
+.dark-mode .visibility-title,
+.dark-mode .privacy-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .visibility-desc,
+.dark-mode .privacy-desc {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .form-actions {
+    border-top-color: var(--border-color) !important;
+}
+
+.dark-mode .btn-secondary {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .btn-secondary:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .preview-image {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+}
+
+/* Group status badges */
+.dark-mode .status-badge {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.dark-mode .status-badge.verified {
+    background: rgba(24, 119, 242, 0.1) !important;
+    color: #1877f2 !important;
+}
+
+.dark-mode .status-badge.private {
+    background: rgba(220, 38, 38, 0.1) !important;
+    color: #dc2626 !important;
+}
+
+.dark-mode .status-badge.public {
+    background: rgba(16, 185, 129, 0.1) !important;
+    color: #10b981 !important;
+}
+
+/* Settings page specific */
+.dark-mode .settings-section {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .setting-title {
+    color: var(--text-primary) !important;
+}
+
+/* Coins page specific */
+.dark-mode .balance-card {
+    background: linear-gradient(135deg, #1877f2 0%, #0a66c2 100%) !important;
+}
+
+.dark-mode .coin-item {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Profile page specific */
+.dark-mode .profile-header {
+    background: transparent !important;
+}
+
+.dark-mode .profile-avatar {
+    border-color: var(--bg-primary) !important;
+    background: var(--bg-tertiary) !important;
+}
+
+.dark-mode .profile-tabs {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dark-mode .profile-name {
+    color: var(--text-primary) !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.dark-mode .intro-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .intro-item {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .intro-icon {
+    color: var(--text-secondary) !important;
+}
+
+/* Cover container */
+.dark-mode .cover-container {
+    background: var(--bg-primary) !important;
+}
+
+.dark-mode .main-body {
+    background: var(--bg-secondary) !important;
+}
+
+/* Friends page */
+.dark-mode .friend-card {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .friend-name {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .friend-mutual {
+    color: var(--text-secondary) !important;
+}
+
+/* Messages */
+.dark-mode .message.success {
+    background: rgba(24, 119, 242, 0.2) !important;
+    color: #4dabf7 !important;
+}
+
+.dark-mode .message.error {
+    background: rgba(220, 38, 38, 0.2) !important;
+    color: #ff6b6b !important;
+}
+
+/* Edit Profile Preview */
+.dark-mode .live-preview {
+    background: var(--card-bg) !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.dark-mode .preview-profile-avatar {
+    border-color: var(--card-bg) !important;
+}
+
+.dark-mode .preview-profile-name,
+.dark-mode .preview-stat-value,
+.dark-mode .preview-info-item {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .preview-profile-bio,
+.dark-mode .preview-stat-label,
+.dark-mode .preview-info-icon {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .preview-stats {
+    border-top-color: var(--border-color) !important;
+}
+
+/* File input labels */
+.dark-mode .file-input-label {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .file-input-label:hover {
+    background: var(--hover-bg) !important;
+}
+
+/* Form groups */
+.dark-mode .form-group label {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .form-group small {
+    color: var(--text-secondary) !important;
+}
+
+/* Sidebar menu items */
+.dark-mode .sidebar-item a {
+    color: var(--text-primary) !important;
+}
+
+/* Left column cards */
+.dark-mode .left-col .card {
+    background: var(--card-bg) !important;
+}
+
+/* Right column cards */
+.dark-mode .right-col .card {
+    background: var(--card-bg) !important;
+}
+
+/* Post author */
+.dark-mode .post-author {
+    color: var(--text-primary) !important;
+}
+
+/* Post content */
+.dark-mode .post-content {
+    color: var(--text-primary) !important;
+}
+
+/* Post header */
+.dark-mode .post-header {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Comments */
+.dark-mode .comment-author {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .comment-text {
+    color: var(--text-primary) !important;
+}
+
+/* No posts message */
+.dark-mode .no-posts {
+    background: var(--card-bg) !important;
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .no-posts h3 {
+    color: var(--text-primary) !important;
+}
+
+/* Profile info section */
+.dark-mode .profile-info {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .profile-name-container {
+    color: var(--text-primary) !important;
+}
+
+/* Profile actions buttons */
+.dark-mode .profile-actions .btn {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+/* Sidebar menu in profile */
+.dark-mode .left-col .card a {
+    color: var(--text-primary) !important;
+    text-decoration: none;
+}
+
+.dark-mode .left-col .card a:hover {
+    background: var(--hover-bg) !important;
+    border-radius: 8px;
+}
+
+/* Admin pages */
+.dark-mode .admin-card {
+    background: var(--card-bg) !important;
+}
+
+.dark-mode .admin-title {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .stat-card {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Lightbox */
+.dark-mode .lightbox {
+    background: rgba(0,0,0,0.95) !important;
+}
+
+.dark-mode .lightbox-close {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .lightbox-close:hover {
+    background: var(--hover-bg) !important;
+}
+
+/* Scrollbar */
+.dark-mode ::-webkit-scrollbar {
+    background: var(--bg-secondary);
+    width: 12px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #4a4b4c;
+}
+
+/* Smooth transition */
+body,
+.header,
+.card,
+.post,
+.sidebar,
+.right-sidebar,
+.content,
+input,
+textarea,
+select,
+button,
+.video-card,
+.group-card,
+.friend-card {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Logo stays blue in dark mode */
+.dark-mode .logo {
+    color: #1877f2 !important;
+}
+
+/* Primary button stays blue */
+.dark-mode .btn-primary {
+    background: #1877f2 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .btn-primary:hover {
+    background: #166fe5 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4) !important;
+    transform: translateY(-1px);
+}
+
+.dark-mode .btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+/* Secondary button improvements */
+.dark-mode .btn-secondary {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2) !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .btn-secondary:hover {
+    background: var(--hover-bg) !important;
+    border-color: var(--text-secondary) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    transform: translateY(-1px);
+}
+
+.dark-mode .btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2) !important;
+}
+
+/* Action buttons (Like, Comment, Share) */
+.dark-mode .action-btn {
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    border: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .action-btn:hover {
+    background: var(--hover-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .action-btn:active {
+    transform: scale(0.95);
+}
+
+/* Header buttons improvements */
+.dark-mode .header-icon,
+.dark-mode .topbar-btn {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .header-icon:hover,
+.dark-mode .topbar-btn:hover {
+    background: var(--hover-bg) !important;
+    transform: scale(1.05);
+}
+
+.dark-mode .header-icon:active,
+.dark-mode .topbar-btn:active {
+    transform: scale(0.95);
+    background: #4a4b4c !important;
+}
+
+/* Navigation items */
+.dark-mode .nav-item {
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+    border-bottom: 3px solid transparent !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .nav-item:hover {
+    background: var(--hover-bg) !important;
+    border-radius: 8px !important;
+}
+
+.dark-mode .nav-item.active {
+    color: #1877f2 !important;
+    border-bottom-color: #1877f2 !important;
+    background: rgba(24, 119, 242, 0.05) !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+.dark-mode .nav-item:active {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .nav-item i {
+    opacity: 0.9;
+}
+
+.dark-mode .nav-item.active i {
+    opacity: 1;
+}
+
+/* User avatar */
+.dark-mode .user-avatar {
+    border-color: transparent !important;
+}
+
+.dark-mode .user-avatar:hover {
+    border-color: #1877f2 !important;
+}
+
+/* Sidebar items */
+.dark-mode .sidebar-item {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .sidebar-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+/* Button with icons */
+.dark-mode .btn i {
+    opacity: 0.9;
+}
+
+/* Add Friend button specific */
+.dark-mode .btn-primary[onclick*="addFriend"],
+.dark-mode .btn-primary[onclick*="followUser"] {
+    background: #1877f2 !important;
+    font-weight: 600 !important;
+}
+
+/* Edit Profile button */
+.dark-mode .btn-secondary[onclick*="openEditModal"] {
+    background: var(--bg-tertiary) !important;
+    font-weight: 600 !important;
+}
+
+/* Boost Followers button */
+.dark-mode .btn-primary[onclick*="boostFollowers"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.dark-mode .btn-primary[onclick*="boostFollowers"]:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #653a8b 100%) !important;
+}
+
+/* Verification badge stays visible */
+.dark-mode .verify-badge {
+    box-shadow: 0 0 15px currentColor, 0 0 30px currentColor, inset 0 0 10px rgba(255,255,255,0.3) !important;
+}
+
+/* Reactions icon stays blue */
+.dark-mode .reactions-icon {
+    color: #1877f2 !important;
+}
+
+/* Search icon */
+.dark-mode .search-icon {
+    color: var(--text-secondary) !important;
+}
+
+/* Search box improvements */
+.dark-mode .search-box {
+    position: relative;
+}
+
+.dark-mode .search-box input {
+    background: var(--input-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease;
+}
+
+.dark-mode .search-box input:focus {
+    background: var(--bg-tertiary) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.1) !important;
+}
+
+.dark-mode .search-box input::placeholder {
+    color: var(--text-secondary) !important;
+    opacity: 0.7;
+}
+
+/* Content title */
+.dark-mode .content-title {
+    color: var(--text-primary) !important;
+}
+
+/* Right sidebar title */
+.dark-mode .right-sidebar-title {
+    color: var(--text-primary) !important;
+}
+
+/* Modal close buttons */
+.dark-mode .modal-close-btn,
+.dark-mode .edit-modal-close {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .modal-close-btn:hover,
+.dark-mode .edit-modal-close:hover {
+    color: var(--text-primary) !important;
+}
+
+/* Modal item icons */
+.dark-mode .modal-item-icon {
+    background: var(--bg-tertiary) !important;
+    color: #1877f2 !important;
+}
+
+/* Modal item title */
+.dark-mode .modal-item-title {
+    color: var(--text-primary) !important;
+}
+
+/* Modal item description */
+.dark-mode .modal-item-desc {
+    color: var(--text-secondary) !important;
+}
+
+/* Empty states */
+.dark-mode .modal-empty {
+    color: var(--text-secondary) !important;
+}
+
+/* Borders */
+.dark-mode .border,
+.dark-mode [class*="border"] {
+    border-color: var(--border-color) !important;
+}
+
+/* Hover states for cards */
+.dark-mode .video-card:hover,
+.dark-mode .group-card:hover,
+.dark-mode .friend-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4) !important;
+}
+
+/* Input focus states */
+.dark-mode input:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+    border-color: #1877f2 !important;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2) !important;
+    outline: none !important;
+}
+
+/* Placeholder text */
+.dark-mode ::placeholder {
+    color: var(--text-secondary) !important;
+    opacity: 0.7;
+}
+
+/* Create post input */
+.dark-mode .create-post-input {
+    background: var(--input-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .create-post-input:hover {
+    background: var(--bg-tertiary) !important;
+}
+
+.dark-mode .create-post-input:focus {
+    background: var(--bg-tertiary) !important;
+    border-color: #1877f2 !important;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.1) !important;
+}
+
+/* Form inputs general */
+.dark-mode .form-input {
+    background: var(--input-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .form-input:focus {
+    background: var(--bg-tertiary) !important;
+    border-color: #1877f2 !important;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.1) !important;
+}
+
+/* Links */
+.dark-mode a {
+    color: #4dabf7 !important;
+}
+
+.dark-mode a:hover {
+    color: #74c0fc !important;
+}
+
+/* Disabled elements */
+.dark-mode button:disabled,
+.dark-mode input:disabled,
+.dark-mode select:disabled,
+.dark-mode textarea:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Loading states */
+.dark-mode .loading {
+    background: var(--bg-tertiary) !important;
+}
+
+/* Badges */
+.dark-mode .badge {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Alerts */
+.dark-mode .alert {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Tooltips */
+.dark-mode .tooltip {
+    background: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+}
+
+/* Progress bars */
+.dark-mode .progress {
+    background: var(--bg-tertiary) !important;
+}
+
+.dark-mode .progress-bar {
+    background: #1877f2 !important;
+}
+
+/* Tabs */
+.dark-mode .tab {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .tab.active {
+    color: #1877f2 !important;
+    border-bottom-color: #1877f2 !important;
+}
+
+/* Dividers */
+.dark-mode hr {
+    border-color: var(--border-color) !important;
+}
+
+/* Code blocks */
+.dark-mode code,
+.dark-mode pre {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Selection */
+.dark-mode ::selection {
+    background: rgba(24, 119, 242, 0.3) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Mobile specific dark mode improvements */
+@media (max-width: 600px) {
+    .dark-mode .header {
+        background: var(--bg-primary) !important;
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+    
+    .dark-mode .nav-item {
+        color: var(--text-secondary) !important;
+        background: transparent !important;
+    }
+    
+    .dark-mode .nav-item.active {
+        color: #1877f2 !important;
+        background: rgba(24, 119, 242, 0.08) !important;
+        border-bottom-color: #1877f2 !important;
+    }
+    
+    .dark-mode .nav-item:active {
+        background: var(--hover-bg) !important;
+    }
+    
+    .dark-mode .header-icon {
+        background: var(--bg-tertiary) !important;
+        color: var(--text-primary) !important;
+    }
+    
+    .dark-mode .header-icon:active {
+        background: #4a4b4c !important;
+    }
+    
+    .dark-mode .create-post {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+    
+    .dark-mode .create-post-input {
+        background: var(--input-bg) !important;
+        color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
+    }
+    
+    .dark-mode .post {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+    
+    .dark-mode .post-author {
+        color: var(--text-primary) !important;
+    }
+    
+    .dark-mode .post-time {
+        color: var(--text-secondary) !important;
+    }
+    
+    .dark-mode .post-content {
+        color: var(--text-primary) !important;
+    }
+    
+    .dark-mode .post-stats {
+        color: var(--text-secondary) !important;
+        border-color: var(--border-color) !important;
+    }
+    
+    .dark-mode .post-action {
+        color: var(--text-secondary) !important;
+    }
+    
+    .dark-mode .post-action:active {
+        background: var(--hover-bg) !important;
+    }
+    
+    .dark-mode .modal-content {
+        background: var(--card-bg) !important;
+    }
+    
+    .dark-mode .comment-content {
+        background: var(--bg-tertiary) !important;
+        color: var(--text-primary) !important;
+    }
+    
+    .dark-mode .comment-author {
+        color: var(--text-primary) !important;
+    }
+    
+    .dark-mode .comment-text {
+        color: var(--text-primary) !important;
+    }
+    
+    .dark-mode .comment-input {
+        background: var(--input-bg) !important;
+        color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
+    }
+    
+    .dark-mode .top-modal {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+    
+    .dark-mode .user-menu {
+        background: var(--card-bg) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+    
+    .dark-mode .modal-item:active {
+        background: var(--hover-bg) !important;
+    }
+    
+    .dark-mode .user-menu-item:active {
+        background: var(--hover-bg) !important;
+    }
+}
+
+/* Search results improvements */
+.dark-mode .search-results {
+    background: var(--card-bg) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.dark-mode .search-result-item {
+    border-bottom-color: var(--border-color) !important;
+}
+
+.dark-mode .search-result-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode .search-result-avatar {
+    border-color: var(--border-color) !important;
+    background: var(--bg-tertiary) !important;
+}
+
+.dark-mode .search-result-name {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode .search-result-btn {
+    background: #1877f2 !important;
+    color: white !important;
+}
+
+.dark-mode .search-result-btn:hover {
+    background: #166fe5 !important;
+}
+
+.dark-mode .search-result-btn:disabled {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .search-empty {
+    color: var(--text-secondary) !important;
+}
+
+/* Search box improvements */
+.dark-mode .search-box {
+    position: relative;
+}
+
+.dark-mode #searchInput {
+    background: var(--input-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid transparent !important;
+}
+
+.dark-mode #searchInput:focus {
+    background: var(--bg-tertiary) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Additional profile page improvements */
+.dark-mode .profile-stats {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .profile-stats span {
+    color: var(--text-secondary) !important;
+}
+
+/* Post card improvements */
+.dark-mode .post-card {
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Intro section improvements */
+.dark-mode .intro-item div {
+    color: var(--text-primary) !important;
+}
+
+/* Better contrast for text on dark backgrounds */
+.dark-mode .profile-name,
+.dark-mode .post-author,
+.dark-mode .intro-title {
+    font-weight: 600 !important;
+}
+
+/* Improve visibility of icons */
+.dark-mode .fa,
+.dark-mode .fas,
+.dark-mode .far,
+.dark-mode .fab {
+    opacity: 0.9;
+}
+
+/* Better hover states */
+.dark-mode .intro-item:hover {
+    background: var(--hover-bg) !important;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+/* Profile bio section */
+.dark-mode .profile-bio {
+    color: var(--text-primary) !important;
+}
+
+/* Improve button contrast */
+.dark-mode .btn-secondary {
+    border: 1px solid var(--border-color) !important;
+}
+
+/* All buttons general improvements */
+.dark-mode button,
+.dark-mode .btn {
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode button:not(:disabled):hover,
+.dark-mode .btn:not(:disabled):hover {
+    filter: brightness(1.1);
+}
+
+/* Coins button in header */
+.dark-mode .topbar-btn[onclick*="coins"] {
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%) !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+
+.dark-mode .topbar-btn[onclick*="coins"]:hover {
+    background: linear-gradient(135deg, #ffcd38 0%, #ffa726 100%) !important;
+}
+
+/* Modal buttons */
+.dark-mode .modal-item {
+    transition: all 0.2s ease !important;
+}
+
+.dark-mode .modal-item:hover {
+    background: var(--hover-bg) !important;
+    transform: translateX(4px);
+}
+
+/* Cancel buttons */
+.dark-mode .cancel,
+.dark-mode .btn-cancel {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.dark-mode .cancel:hover,
+.dark-mode .btn-cancel:hover {
+    background: var(--hover-bg) !important;
+}
+
+/* Save/Submit buttons */
+.dark-mode .save,
+.dark-mode .btn-save,
+.dark-mode button[type="submit"] {
+    background: #1877f2 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.dark-mode .save:hover,
+.dark-mode .btn-save:hover,
+.dark-mode button[type="submit"]:hover {
+    background: #166fe5 !important;
+}
+
+/* Delete/Danger buttons */
+.dark-mode .btn-danger,
+.dark-mode .btn-delete {
+    background: #dc2626 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.dark-mode .btn-danger:hover,
+.dark-mode .btn-delete:hover {
+    background: #b91c1c !important;
+}
+
+/* Success buttons */
+.dark-mode .btn-success {
+    background: #10b981 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.dark-mode .btn-success:hover {
+    background: #059669 !important;
+}
+
+/* Warning buttons */
+.dark-mode .btn-warning {
+    background: #f59e0b !important;
+    color: white !important;
+    border: none !important;
+}
+
+.dark-mode .btn-warning:hover {
+    background: #d97706 !important;
+}
+
+/* Icon buttons */
+.dark-mode .icon-btn {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: none !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.dark-mode .icon-btn:hover {
+    background: var(--hover-bg) !important;
+    transform: scale(1.1);
+}
+
+/* Post time and meta */
+.dark-mode .post-time,
+.dark-mode .post-meta {
+    color: var(--text-secondary) !important;
+    opacity: 0.8;
+}
+
+/* Comments link */
+.dark-mode .comments-link {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode .comments-link:hover {
+    color: var(--text-primary) !important;
+}
+
+/* Post stats */
+.dark-mode .post-stats {
+    border-bottom: 1px solid var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* Better spacing and readability */
+.dark-mode .container {
+    color: var(--text-primary) !important;
+}
+
+/* Ensure all text is readable */
+.dark-mode * {
+    border-color: var(--border-color);
+}
+
+/* Fix any white backgrounds */
+.dark-mode [style*="background: #fff"],
+.dark-mode [style*="background:#fff"],
+.dark-mode [style*="background: white"],
+.dark-mode [style*="background:white"] {
+    background: var(--card-bg) !important;
+}
+
+/* Fix any black text */
+.dark-mode [style*="color: #050505"],
+.dark-mode [style*="color:#050505"],
+.dark-mode [style*="color: black"],
+.dark-mode [style*="color:black"] {
+    color: var(--text-primary) !important;
+}
+
+/* Mobile User Menu Improvements */
+@media (max-width: 600px) {
+    .dark-mode .user-menu {
+        box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+    }
+    
+    .dark-mode .user-menu-header {
+        padding: 16px !important;
+        background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%) !important;
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+    
+    .dark-mode .user-menu-item {
+        padding: 16px !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        min-height: 64px;
+    }
+    
+    .dark-mode .user-menu-item:last-child {
+        border-bottom: none !important;
+    }
+    
+    .dark-mode .user-menu-item i {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 20px !important;
+        background: var(--bg-tertiary) !important;
+    }
+    
+    .dark-mode .user-menu-item span {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+    }
+    
+    .dark-mode .user-menu-item .chevron {
+        font-size: 18px !important;
+    }
+    
+    .dark-mode .user-menu-divider {
+        margin: 0 !important;
+        background: var(--border-color) !important;
+    }
+}
+
+/* Friends Page Search Results Dark Mode */
+.dark-mode #friendSearchResults {
+    background: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+}
+
+.dark-mode #friendSearchResults .search-result-item {
+    border-bottom-color: var(--border-color) !important;
+}
+
+.dark-mode #friendSearchResults .search-result-item:hover {
+    background: var(--hover-bg) !important;
+}
+
+.dark-mode #friendSearchResults .search-result-item:active {
+    background: #4a4b4c !important;
+}
+
+.dark-mode #friendSearchResults .search-result-avatar {
+    border-color: var(--border-color) !important;
+    background: var(--bg-tertiary) !important;
+}
+
+.dark-mode #friendSearchResults .search-result-item:hover .search-result-avatar {
+    border-color: #1877f2 !important;
+}
+
+.dark-mode #friendSearchResults .search-result-name {
+    color: var(--text-primary) !important;
+}
+
+.dark-mode #friendSearchResults .search-result-username {
+    color: var(--text-secondary) !important;
+}
+
+.dark-mode #friendSearchResults .search-empty {
+    color: var(--text-secondary) !important;
+}
+
+/* Avatar Placeholder Improvements */
+img[class*="avatar"] {
+    transition: opacity 0.3s ease;
+}
+
+img[class*="avatar"].avatar-loaded {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Ensure circular avatars stay circular */
+.profile-avatar,
+.user-avatar,
+.topbar-avatar,
+.post-avatar,
+.comment-avatar,
+.search-result-avatar,
+.friend-avatar-small {
+    object-fit: cover;
+    object-position: center;
+}
