@@ -1,0 +1,224 @@
+/* ===============================
+   GLOBAL
+================================= */
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:system-ui,-apple-system,sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    -webkit-font-smoothing:antialiased;
+}
+
+/* ===============================
+   OVERLAY CONTAINER
+================================= */
+.overlay{
+    padding:30px 20px 100px;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===============================
+   TOP BAR
+================================= */
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.logo{
+    font-weight:700;
+    letter-spacing:1px;
+    font-size:20px;
+}
+
+/* ===============================
+   TITLE
+================================= */
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h1{
+    margin:0;
+    font-size:28px;
+    font-weight:700;
+}
+
+.title p{
+    opacity:.7;
+    margin-top:10px;
+}
+
+/* ===============================
+   PLANS CONTAINER
+================================= */
+.plans-container{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom:10px;
+    scroll-snap-type:x mandatory;
+}
+
+.plans-container::-webkit-scrollbar{
+    height:6px;
+}
+
+.plans-container::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,0.2);
+    border-radius:10px;
+}
+
+/* ===============================
+   PLAN CARD
+================================= */
+.plan-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    padding:25px;
+    border-radius:22px;
+    min-width:300px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+    transition:all .3s ease;
+    scroll-snap-align:start;
+    border:1px solid rgba(255,255,255,0.1);
+    position:relative;
+}
+
+.plan-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.45);
+}
+
+/* ===============================
+   MOST POPULAR BADGE
+================================= */
+.plan-card.popular::before{
+    content:"MOST POPULAR";
+    position:absolute;
+    top:-12px;
+    right:20px;
+    background:#1877f2;
+    padding:6px 12px;
+    font-size:11px;
+    border-radius:20px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+/* ===============================
+   PLAN HEADER
+================================= */
+.plan-card h3{
+    margin-top:0;
+    font-size:20px;
+}
+
+.price{
+    font-size:24px;
+    font-weight:700;
+    margin:10px 0;
+}
+
+.price span{
+    font-size:14px;
+    opacity:.7;
+    font-weight:400;
+}
+
+/* ===============================
+   FEATURES
+================================= */
+.features{
+    margin-top:15px;
+}
+
+.features p{
+    margin:10px 0;
+    font-size:14px;
+    opacity:.9;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+.subscribe-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#1877f2;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:20px;
+    transition:.25s ease;
+}
+
+.subscribe-btn:hover{
+    background:#166fe5;
+    transform:translateY(-2px);
+}
+
+/* Premium plan button style */
+.plan-card.popular .subscribe-btn{
+    background:linear-gradient(90deg,#1877f2,#42a5ff);
+}
+
+/* ===============================
+   UNLOCK BIG BUTTON
+================================= */
+.unlock-btn{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(90deg,#1877f2,#42a5ff);
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:1px;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(24,119,242,0.4);
+    transition:.3s ease;
+}
+
+.unlock-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(24,119,242,0.6);
+}
+
+/* ===============================
+   FIXED BOTTOM BUTTON
+================================= */
+.bottom-btn{
+    position:fixed;
+    bottom:25px;
+    left:20px;
+    right:20px;
+    z-index:1000;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media(max-width:768px){
+
+    .plan-card{
+        min-width:260px;
+    }
+
+    .title h1{
+        font-size:22px;
+    }
+
+}

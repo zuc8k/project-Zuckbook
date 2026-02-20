@@ -1,0 +1,98 @@
+ZuckBook - Quick Start Guide
+=============================
+
+OPTION 1: DOCKER (Recommended)
+==============================
+
+Windows:
+  1. Install Docker Desktop
+  2. Run: START.bat
+  3. Access: http://localhost:8080
+
+Linux/Mac:
+  1. Install Docker
+  2. Run: bash START.sh
+  3. Access: http://localhost:8080
+
+Services:
+  - Apache: http://localhost:8080
+  - MySQL: localhost:3307
+  - Socket: http://localhost:3000
+
+Stop:
+  docker-compose down
+
+
+OPTION 2: XAMPP (Local)
+=======================
+
+Windows:
+  1. Install XAMPP
+  2. Run: RUN_XAMPP.bat
+  3. Access: http://localhost:8080
+
+Manual Setup:
+  1. Start MySQL in XAMPP Control Panel
+  2. Start Apache in XAMPP Control Panel
+  3. Import database:
+     - Open phpMyAdmin: http://localhost/phpmyadmin
+     - Import: ZuckBook/database/zuckbook_database.sql
+  4. Start Socket Server:
+     cd socket-server
+     npm install
+     npm start
+  5. Access: http://localhost:8080
+
+Database Credentials:
+  - Host: localhost
+  - User: root
+  - Password: 197520error
+  - Database: zuckbook
+  - Port: 3306
+
+
+TROUBLESHOOTING
+===============
+
+Port Already in Use:
+  - Docker: docker-compose down
+  - XAMPP: Check Services tab
+
+MySQL Connection Failed:
+  - Verify MySQL is running
+  - Check credentials in backend/config.php
+  - Verify database exists
+
+Socket.IO Not Connecting:
+  - Check Node.js is installed
+  - Verify port 3000 is available
+  - Check browser console for errors
+
+Apache Not Starting:
+  - Check port 80/8080 is available
+  - Check httpd.conf syntax
+  - Review Apache error logs
+
+
+FEATURES
+========
+
+- User Registration & Login
+- Posts & Comments
+- Real-time Reactions
+- Messaging System
+- Socket.IO Real-time Updates
+- User Profiles
+- Groups (Database ready)
+- Admin Panel (Database ready)
+- Support Tickets (Database ready)
+
+
+NEXT STEPS
+==========
+
+1. Create test account
+2. Create posts
+3. Test messaging
+4. Check admin panel
+5. Review database schema

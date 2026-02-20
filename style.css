@@ -1,0 +1,258 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root{
+    --primary:#1877f2;
+    --primary-hover:#166fe5;
+
+    --bg:#f0f2f5;
+    --card:#ffffff;
+    --text:#1c1e21;
+    --sub:#65676b;
+    --border:#e4e6eb;
+
+    --shadow-soft:0 2px 8px rgba(0,0,0,0.05);
+    --shadow-hover:0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   RESET + GLOBAL
+========================= */
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:system-ui,-apple-system,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar{
+    background:var(--card);
+    color:var(--text);
+    padding:16px 24px;
+    font-size:18px;
+    font-weight:600;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:var(--shadow-soft);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid var(--border);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container{
+    width:600px;
+    margin:30px auto;
+}
+
+/* =========================
+   CARD STYLE (POST + BOX)
+========================= */
+.post-box,
+.post{
+    background:var(--card);
+    padding:18px;
+    border-radius:16px;
+    margin-bottom:20px;
+    box-shadow:var(--shadow-soft);
+    transition:all .25s ease;
+    border:1px solid var(--border);
+}
+
+.post:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-hover);
+}
+
+/* =========================
+   POST HEADER
+========================= */
+.post strong{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* =========================
+   GOLD NAME EFFECT
+========================= */
+.gold-name{
+    background:linear-gradient(90deg,#f5c542,#ffdf00,#f5c542);
+    background-size:200% auto;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:goldMove 3s linear infinite;
+    font-weight:700;
+}
+
+@keyframes goldMove{
+    0%{background-position:0%}
+    100%{background-position:200%}
+}
+
+/* =========================
+   VERIFIED BADGES
+========================= */
+.verified-badge{
+    width:14px;
+    height:14px;
+}
+
+.verified-blue{ fill:#1DA1F2; }
+.verified-gold{ fill:#f5c542; }
+
+/* =========================
+   POST CONTENT
+========================= */
+.post p{
+    margin:10px 0;
+    font-size:15px;
+    line-height:1.6;
+}
+
+.post img{
+    width:100%;
+    border-radius:14px;
+    margin-top:12px;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+textarea{
+    width:100%;
+    padding:12px 14px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    resize:none;
+    font-family:inherit;
+    font-size:14px;
+    background:#fafafa;
+    transition:.2s ease;
+}
+
+textarea:focus{
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 3px rgba(24,119,242,0.15);
+    background:#fff;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:9px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:500;
+    transition:.2s ease;
+}
+
+button:hover{
+    background:var(--primary-hover);
+    transform:translateY(-1px);
+}
+
+/* =========================
+   LIKE BUTTON
+========================= */
+.like-btn{
+    background:none;
+    color:var(--sub);
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    padding:6px 12px;
+    border-radius:8px;
+    transition:.2s ease;
+}
+
+.like-btn:hover{
+    background:#f0f2f5;
+}
+
+.like-active{
+    color:#e41e3f !important;
+}
+
+/* =========================
+   COMMENT INPUT
+========================= */
+.comment-input{
+    width:100%;
+    padding:9px 14px;
+    border-radius:20px;
+    border:1px solid var(--border);
+    background:#f0f2f5;
+    margin-top:12px;
+    font-size:14px;
+}
+
+/* =========================
+   POST STATS
+========================= */
+.post-stats{
+    font-size:13px;
+    color:var(--sub);
+    margin-top:10px;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* =========================
+   ACTION BAR
+========================= */
+.post-actions{
+    display:flex;
+    justify-content:space-around;
+    margin-top:12px;
+    border-top:1px solid var(--border);
+    padding-top:10px;
+}
+
+.post-actions button{
+    background:none;
+    color:var(--sub);
+    font-weight:500;
+    border-radius:8px;
+    padding:8px 12px;
+}
+
+.post-actions button:hover{
+    background:#f0f2f5;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media(max-width:650px){
+
+    .container{
+        width:95%;
+        margin:20px auto;
+    }
+
+    .navbar{
+        font-size:16px;
+        padding:14px 16px;
+    }
+
+}

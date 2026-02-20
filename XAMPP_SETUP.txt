@@ -1,0 +1,27 @@
+ZuckBook - XAMPP Setup
+======================
+
+1. INSTALL XAMPP
+   Download from: https://www.apachefriends.org/
+
+2. CREATE DATABASE
+   - Start MySQL in XAMPP
+   - Open phpMyAdmin: http://localhost/phpmyadmin
+   - Import: ZuckBook/database/zuckbook_database.sql
+
+3. PLACE PROJECT
+   - Copy to: C:\xampp\htdocs\zuckbook
+
+4. START SERVICES
+   - Start Apache
+   - Start MySQL
+   - Start Node: cd socket-server && npm install && npm start
+
+5. ACCESS
+   - http://localhost:8080
+   - Or http://localhost
+
+6. CREDENTIALS
+   - MySQL User: root
+   - MySQL Pass: 197520error
+   - Database: zuckbook

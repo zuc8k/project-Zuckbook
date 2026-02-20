@@ -1,0 +1,68 @@
+ZuckBook - Setup Instructions
+=============================
+
+STEP 1: Start MySQL
+===================
+Option A (Recommended):
+  1. Open XAMPP Control Panel
+  2. Click "Start" button next to MySQL
+  3. Wait until it shows "Running" (green)
+
+Option B (Manual):
+  1. Run: START_MYSQL.bat
+  2. Wait for MySQL to start
+
+STEP 2: Setup Database
+======================
+  1. Open browser: http://localhost/setup-db.php
+  2. Wait for "Database setup completed successfully!"
+  3. You will be redirected automatically
+
+STEP 3: Start Apache
+====================
+  1. Open XAMPP Control Panel
+  2. Click "Start" button next to Apache
+  3. Wait until it shows "Running" (green)
+
+STEP 4: Start Socket Server (Optional)
+=======================================
+  1. Open Command Prompt
+  2. Navigate to: socket-server folder
+  3. Run: npm install
+  4. Run: npm start
+
+STEP 5: Access Application
+===========================
+  Open browser: http://localhost
+
+Login Credentials:
+  - Create new account or use test account
+  - Email: test@example.com
+  - Password: test123456
+
+Database Credentials:
+  - Host: localhost
+  - User: root
+  - Password: 197520error
+  - Database: zuckbook
+  - Port: 3306
+
+Troubleshooting:
+================
+If MySQL won't start:
+  - Check if port 3306 is in use
+  - Try: netstat -ano | findstr :3306
+  - Kill the process if needed
+
+If Apache won't start:
+  - Check if port 80 is in use
+  - Try port 8080 instead
+
+If database setup fails:
+  - Make sure MySQL is running
+  - Check MySQL credentials
+  - Try importing manually via phpMyAdmin
+
+Questions?
+==========
+Check the README.md file for more information.

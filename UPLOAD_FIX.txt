@@ -1,0 +1,37 @@
+حل مشكلة رفع الصور في ZuckBook
+================================
+
+المشكلة: "Failed to upload cover image"
+
+الحل:
+
+1. تأكد من أن مجلد uploads موجود وله صلاحيات الكتابة:
+   - المسار: c:\xampp\htdocs\uploads
+   - الصلاحيات: 777 (قراءة وكتابة وتنفيذ)
+
+2. تحقق من إعدادات PHP في XAMPP:
+   - افتح: c:\xampp\php\php.ini
+   - ابحث عن:
+     * upload_max_filesize = 128M (أو أكثر)
+     * post_max_size = 128M (أو أكثر)
+     * max_file_uploads = 20 (أو أكثر)
+     * file_uploads = On
+
+3. إعادة تشغيل Apache:
+   - افتح XAMPP Control Panel
+   - اضغط Stop على Apache
+   - اضغط Start على Apache
+
+4. اختبر رفع الملفات:
+   - افتح: http://localhost/test_upload.php
+   - اختبر رفع ملف صغير
+
+5. إذا استمرت المشكلة:
+   - افتح: http://localhost/php_info.php
+   - ابحث عن "upload_max_filesize" و "post_max_size"
+   - تأكد من أن القيم كبيرة بما يكفي
+
+ملاحظات:
+- حد أقصى لحجم الصورة: 5MB
+- الصيغ المدعومة: JPG, PNG, GIF, WebP
+- الملفات المرفوعة تُحفظ في: /uploads/
